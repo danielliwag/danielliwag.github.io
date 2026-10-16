@@ -17,7 +17,7 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 // certification variables
-const testimonialsItems = document.querySelectorAll('[data-testimonials-item]');
+const certificationItems = document.querySelectorAll('[data-certification-item]');
 const modalContainer = document.querySelector('[data-modal-container]');
 const modalCloseBtn = document.querySelector('[data-modal-close-btn]');
 const overlay = document.querySelector('[data-overlay]');
@@ -34,7 +34,7 @@ const certImgHolder = document.getElementById('cert-img-holder');
 const popupLightboxLink = document.querySelector('[data-popup-lightbox-link]');
 
 const preloadedImages = {};
-testimonialsItems.forEach(item => {
+certificationItems.forEach(item => {
   const highResImgUrl = item.getAttribute('data-cert-img');
   if (highResImgUrl && !preloadedImages[highResImgUrl]) {
     const img = new Image();
@@ -44,14 +44,14 @@ testimonialsItems.forEach(item => {
 });
 
 // Handle open event for certificate description modals
-testimonialsItems.forEach(item => {
+certificationItems.forEach(item => {
   item.addEventListener('click', function () {
     const title = this.getAttribute('data-cert-title');
     const company = this.getAttribute('data-cert-company');
     const dateText = this.getAttribute('data-cert-date');
     const dateTimeVal = this.getAttribute('data-cert-datetime');
-    const description = this.querySelector('[data-testimonials-text] p').textContent.trim();
-    const avatarSrc = this.querySelector('[data-testimonials-avatar]').src;
+    const description = this.querySelector('[data-certification-text] p').textContent.trim();
+    const avatarSrc = this.querySelector('[data-certification-avatar]').src;
     
     const certificateImg = this.getAttribute('data-cert-img');
     const externalVerificationUrl = this.getAttribute('data-cert-url');
