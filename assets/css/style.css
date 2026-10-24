@@ -712,6 +712,10 @@ main {
   filter: grayscale(0);
 }
 
+.modal-container.active .modal-avatar-box img {
+  filter: grayscale(0);
+}
+
 .modal-title { margin-bottom: 4px; }
 
 .modal-content time {
@@ -1661,7 +1665,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .certification-avatar-box {
     transform: translate(30px, -30px);
-    border-radius: 20px;
+    border-radius: 12px;
   }
 
   .certification-item-title {
